@@ -8,7 +8,7 @@ Cat::Cat(std::string const &type) : Animal(type){
 std::cout << YELLOW <<"CLASS CAT : "<<  _type << " created" + RESET << std::endl;
 }
 
-Cat::Cat(Cat const &type){
+Cat::Cat(Cat const &type) : Animal(type){
 	std::cout << YELLOW + "CLASS CAT : constructor copy called" + RESET << std::endl;
 	*this = type;
 }

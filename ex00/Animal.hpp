@@ -24,7 +24,6 @@ class Animal{
 		Animal(Animal const &src);
 		Animal &operator=(Animal const &type);
 		virtual ~Animal();
-		virtual void setIdea(int index,  std::string &idea);
 		virtual void makeSound()const;
 		std::string getType()const; 
 };

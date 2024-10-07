@@ -8,31 +8,37 @@
 		std::cout << "Brain created with default ideas" << std::endl;
 	}
 
-	Brain::Brain(const std::string (&ideasArray)[100]) {
-		for(int i = 0; i < 100; i++)
-			_idea[i] = ideasArray[i];
-		std::cout << "Brain with custom ideas created" << std::endl;
-	}
-
-	Brain::Brain(Brain const &src){
+	Brain::Brain(const Brain &src){
 		std::cout << "Brain copy" << std::endl;
-		*this = src;
+		if (this != &src) {
+		for (size_t i = 0; i < 100; ++i) 
+			_idea[i] = src._idea[i];
+		}
 	}
 
 	Brain &Brain::operator=(const Brain &brain){
-		this->_idea[100] = brain._idea[100];
-		return *this;
+		if (this != &brain) {
+			for (size_t i = 0; i < 100; ++i) 
+				_idea[i] = brain._idea[i];
+        }
+        return *this;
 	}
 
 	Brain::~Brain(){
 		std::cout << "Brain destructed" << std::endl;
 	}
 
-	void Brain::setIdea(int index, std::string const &idea){
-		this->_idea[index] = idea[index];
+	void Brain::setIdea(int index, const std::string  &idea){
+		if (index >= 0 && index < 100)  
+			this->_idea[index] = idea;
+		else
+			std::cout << RED +"Idea out of range" + RESET << std::endl;
 	}
 
 	std::string Brain::getIdea(int index){
-		return this->_idea[index];
+		if (index >= 0 && index < 100)  
+       		return this->_idea[index];
+		else
+			return RED +"Idea out of range" + RESET;
 	}
 	

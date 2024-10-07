@@ -9,9 +9,10 @@ class Dog : public Animal{
 	public :
 		Dog();
 		Dog(std::string const &_type);
-		Dog(Dog const  &dog);
+		Dog(const Dog &dog);
 		Dog & operator=(Dog const &dog);
 		~Dog();
-
+		void setIdea(int index, const std::string &idea);
+		std::string  getIdea(int index);
 		void makeSound()const;
 };

@@ -7,10 +7,9 @@ class Brain{
 		std::string _idea[100];
 	public :
 		Brain();
-		Brain(const std::string (&ideasArray)[100]);
-		Brain(Brain const &src);
+		Brain(const Brain &src);
 		Brain &operator=(const Brain &brain);
-		virtual ~Brain();
-		void setIdea(int index, std::string const &idea);
+		~Brain();
+		void setIdea(int index, const std::string  &idea);
 		std::string getIdea(int index);
 };

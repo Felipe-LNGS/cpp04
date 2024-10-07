@@ -2,9 +2,9 @@ NAME		=   animal
 
 CC			=   c++
 
-FLAG		=   -std=c++98 -Wall -Wextra -Werror -pedantic
+FLAG		=   -std=c++98 -Wall -Wextra -Werror -pedantic -g3
 
-C_FILES		=   main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+C_FILES		=   main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ_DIR		=   make
 

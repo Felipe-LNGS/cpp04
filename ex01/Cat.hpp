@@ -9,11 +9,10 @@ class Cat : public Animal{
 	public:
 		Cat();
 		Cat(const std::string &type);
-		Cat(Cat const &type);
+		Cat(const Cat &type);
 		Cat & operator=(Cat const &type);
 		~Cat();
-	void setIdea(int index, std::string const &idea);
-	std::string  getIdea(int index);
-
-		void makeSound()const;
+	void setIdea(int index,const std::string  &idea);
+	std::string  getIdea(int index)const ;
+	void makeSound()const;
 };

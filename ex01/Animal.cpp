@@ -29,11 +29,3 @@ std::cout << BLUE <<"CLASS ANIMAL : "<< _type << " makes an unknown sound in the
 std::string Animal::getType()const {
 return (this->_type);
 }
-
-void Animal::setIdea(int index, std::string const &idea){
-	setIdea(index, idea);
-}
-
-std::string Animal::getIdea(int index){
-	return getIdea(index);
-}

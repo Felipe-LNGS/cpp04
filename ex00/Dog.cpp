@@ -8,7 +8,7 @@ Dog::Dog(const std::string &type):Animal(type){
 	std::cout << GREEN + "CLASS Dog : " << _type << " created" + RESET << std::endl;
 }
 
-Dog::Dog(const Dog &type){
+Dog::Dog(const Dog &type): Animal(type){
 	std::cout << GREEN + "CLASS Dog constructor copy called" + RESET << std::endl;
 	*this = type;
 }

@@ -9,7 +9,7 @@
 	}
 
 
-	WrongCat::WrongCat(WrongCat const &type){
+	WrongCat::WrongCat(WrongCat const &type) :WrongAnimal(type){
 	std::cout << CYAN + "CLASS WRONG CAT constructor copy called" + RESET << std::endl;
 	*this = type;
 	}
