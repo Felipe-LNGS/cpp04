@@ -1,10 +1,10 @@
-NAME		=   brain
+NAME		=   Amateria
 
-CC			=   c++
+CC			=   clang++
 
 FLAG		=   -std=c++98 -Wall -Wextra -Werror -pedantic -g3
 
-C_FILES		=   main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp WrongAnimal.cpp WrongCat.cpp
+C_FILES		=   main.cpp MateriaIce.cpp MateriaCure.cpp ICharacter.cpp IMateriaSource.cpp
 
 OBJ_DIR		=   make
 
