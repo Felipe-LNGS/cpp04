@@ -1,20 +1,34 @@
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
-    AMateria::AMateria(std::string const & type) : _type(type){}
-    AMateria::AMateria (AMateria const &type): _type(type._type){}
+ AMateria::AMateria( void ): _type("Random materia")
+{
+}
 
-    AMateria &AMateria::operator=(const AMateria &materia){
-        if (this != &materia)
-            this->_type = materia._type;
-        return *this;
-    }
+AMateria::AMateria( std::string const &type ): _type(type)
+{
+}
 
-    AMateria::~AMateria(){}
+AMateria::AMateria( const AMateria &src ): _type(src._type)
+{
+}
 
-    const std::string & AMateria::getType() const{
-        return this->_type;
-    }
+AMateria::~AMateria()
+{
+}
 
-    void AMateria::use(ICharacter& target){
-        std::cout << "* shoots with random sort at" << &target << "*" << std::endl;
-    }
+AMateria	&AMateria::operator=( const AMateria &materia )
+{
+    (void)materia;
+	return (*this);
+}
+
+std::string const	&AMateria::getType( void ) const
+{
+	return (this->_type);
+}
+
+void	AMateria::use( ICharacter &target)
+{
+	(void) target;
+}

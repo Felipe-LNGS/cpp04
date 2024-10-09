@@ -1,12 +1,12 @@
-NAME		=   Amateria
+NAME		=   materia
 
-CC			=   clang++
+CC			=   c++
 
-FLAG		=   -std=c++98 -Wall -Wextra -Werror -pedantic -g3
+FLAG		=   -std=c++98 -Wall -Wextra -Werror -g3
 
-C_FILES		=   main.cpp MateriaIce.cpp MateriaCure.cpp ICharacter.cpp IMateriaSource.cpp
+C_FILES		=   main.cpp AMateria.cpp Character.cpp Ice.cpp Cure.cpp  MateriaSource.cpp
 
-OBJ_DIR		=   make
+OBJ_DIR		=   obj
 
 OBJS		=   $(addprefix $(OBJ_DIR)/, $(C_FILES:.cpp=.o))
 
