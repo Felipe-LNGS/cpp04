@@ -9,21 +9,21 @@ int main()
 {
 
 /***************MANDATORY***************/
-// IMateriaSource* src = new MateriaSource();
-// src->learnMateria(new Ice());
-// src->learnMateria(new Cure());
-// ICharacter* me = new Character("me");
-// AMateria* tmp;
-// tmp = src->createMateria("ice");
-// me->equip(tmp);
-// tmp = src->createMateria("cure");
-// me->equip(tmp);
-// ICharacter* bob = new Character("bob");
-// me->use(0, *bob);
-// me->use(1, *bob);
-// delete bob;
-// delete me;
-// delete src;
+IMateriaSource* src = new MateriaSource();
+src->learnMateria(new Ice());
+src->learnMateria(new Cure());
+ICharacter* me = new Character("me");
+AMateria* tmp;
+tmp = src->createMateria("ice");
+me->equip(tmp);
+tmp = src->createMateria("cure");
+me->equip(tmp);
+ICharacter* bob = new Character("bob");
+me->use(0, *bob);
+me->use(1, *bob);
+delete bob;
+delete me;
+delete src;
 /********************************************/
 
 /***************INVENTORY FULL***************/
@@ -51,7 +51,7 @@ int main()
 // me->equip(tmp);
 // tmp = src->createMateria("cure");
 // me->equip(tmp);
-// tmp = src->createMateria("cure");
+// tmp = src->createMateria("ice");
 // me->equip(tmp);
 
 // static_cast<Character*> (me)->infoInventory();
@@ -75,10 +75,11 @@ int main()
 // me->equip(tmp);
 // tmp = src->createMateria("cure");
 // me->equip(tmp);
+// tmp = src->createMateria("water");
+// me->equip(tmp);
 // tmp = src->createMateria("ice");
 // me->equip(tmp);
-// tmp = src->createMateria("curef");
-// me->equip(tmp);
+
 // static_cast<Character*> (me)->infoInventory();
 // ICharacter* bob = new Character("bob");
 // me->use(0, *bob);
@@ -89,34 +90,34 @@ int main()
 // /********************************************/
 
 /*********************UNEQUIP********************/
-IMateriaSource* src = new MateriaSource();
-src->learnMateria(new Ice());
-src->learnMateria(new Cure());
-ICharacter* me = new Character("me");
-AMateria* tmp;
-static_cast<MateriaSource*> (src)->infoLearned();
-static_cast<Character*> (me)->infoInventory();
-tmp = src->createMateria("ice");
-me->equip(tmp);
-tmp = src->createMateria("cure");
-me->equip(tmp);
-tmp = src->createMateria("ice");
-me->equip(tmp);
-tmp = src->createMateria("cure");
-me->equip(tmp);
-static_cast<Character*> (me)->infoInventory();
-me->unequip(0);
-static_cast<Character*> (me)->infoInventory();
-me->equip(tmp);
-static_cast<Character*> (me)->infoInventory();
+// IMateriaSource* src = new MateriaSource();
+// src->learnMateria(new Ice());
+// src->learnMateria(new Cure());
+// ICharacter* me = new Character("me");
+// AMateria* tmp;
+// static_cast<MateriaSource*> (src)->infoLearned();
+// static_cast<Character*> (me)->infoInventory();
+// tmp = src->createMateria("ice");
+// me->equip(tmp);
+// tmp = src->createMateria("cure");
+// me->equip(tmp);
+// tmp = src->createMateria("ice");
+// me->equip(tmp);
+// tmp = src->createMateria("cure");
+// me->equip(tmp);
+// static_cast<Character*> (me)->infoInventory();
+// me->unequip(0);
+// static_cast<Character*> (me)->infoInventory();
+// me->equip(tmp);
+// static_cast<Character*> (me)->infoInventory();
 
-ICharacter* bob = new Character("bob");
-me->use(0, *bob);
-me->use(1, *bob);
+// ICharacter* bob = new Character("bob");
+// me->use(0, *bob);
+// me->use(1, *bob);
 
-delete bob;
-delete me;
-delete src;
+// delete bob;
+// delete me;
+// delete src;
 
 /********************************************/
 

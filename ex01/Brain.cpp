@@ -5,11 +5,11 @@
 		{
 			_idea[i]= "is sleeping";
 		}
-		std::cout << "Brain created with default ideas" << std::endl;
+		std::cout << RED +"Brain created with default ideas" + RESET << std::endl;
 	}
 
 	Brain::Brain(const Brain &src){
-		std::cout << "Brain copy" << std::endl;
+		std::cout << RED + "Brain copy" + RESET << std::endl;
 		if (this != &src) {
 		for (size_t i = 0; i < 100; ++i) 
 			_idea[i] = src._idea[i];
@@ -26,7 +26,7 @@
 	}
 
 	Brain::~Brain(){
-		std::cout << "Brain destructed" << std::endl;
+		std::cout << RED+ "Brain destructed" + RESET  << std::endl;
 	}
 
 	void Brain::setIdea(int index, const std::string  &idea){

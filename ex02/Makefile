@@ -2,7 +2,7 @@ NAME		=   Aanimal
 
 CC			=   c++
 
-FLAG		=   -std=c++98 -Wall -Wextra -Werror -pedantic -g3
+FLAG		=   -std=c++98 -Wall -Wextra -Werror -g3
 
 C_FILES		=   main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp WrongAnimal.cpp WrongCat.cpp
 
